@@ -11,14 +11,14 @@ import org.testng.annotations.DataProvider;
 
 public class DataInputProvider {
 	
-	@DataProvider (name = "fetchData")
-	
-	public static String[][] getData(){
+
+	public static String[][] getData(String dataSheet){
 		
 		String [][] testData = null;
 		
 		try {
-			FileInputStream fis = new FileInputStream("./testData/LinkedIn.xlsx");
+			
+			FileInputStream fis = new FileInputStream("./TestData/LinkedIn.xlsx");
 			
 			XSSFWorkbook wb = new XSSFWorkbook(fis);
 			
@@ -46,7 +46,6 @@ public class DataInputProvider {
 					
 					testData[i-1][j]=cellData;
 				}
-				
 			}
 			
 		} catch (FileNotFoundException e) {
@@ -57,9 +56,8 @@ public class DataInputProvider {
 			e.printStackTrace();
 		}
 		
-		
-		
 		return testData;
+		
 	}
 
 }
