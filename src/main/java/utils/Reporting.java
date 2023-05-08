@@ -26,7 +26,6 @@ public abstract class Reporting {
 	
 	/**
 	 * This method will take snapshot of the browser
-	 * @author Basha - LibertyTestingCenter
 	 */
 	public abstract long takeSnap();
 	
